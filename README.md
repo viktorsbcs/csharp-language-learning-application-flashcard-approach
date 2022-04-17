@@ -1,4 +1,4 @@
-# C# Language learning console application using flashcard method. #
+# .NET 6 C# Language learning console application using flashcard method. #
 
 Specify a text file that contains list of two words per line seperated by colon ':', where word on the left is from language you're learning and word on the right desired translation. Example:
 der Morgen:morning
