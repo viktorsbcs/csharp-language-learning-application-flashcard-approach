@@ -11,13 +11,15 @@ namespace LanguageApp
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Language learning app!");
-
+            Console.WriteLine("---------------------------------");
             while (true)
             {
                 Console.Write("Input: ");
-                int inputMenuNumber = int.Parse(Console.ReadLine());
 
-                switch (inputMenuNumber)
+                int.TryParse(Console.ReadLine(), out int result);
+
+                
+                switch (result)
                 {
                     case 1:
                         Console.WriteLine("Menu 1 selected");
