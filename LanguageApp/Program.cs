@@ -10,7 +10,12 @@ namespace LanguageApp
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("LanguageApp Started");
+            Console.WriteLine("Welcome to Language learning app!");
+
+            while (true)
+            {
+
+            }
 
         }
     }
