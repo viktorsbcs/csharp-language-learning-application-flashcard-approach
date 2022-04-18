@@ -19,7 +19,7 @@ namespace LanguageApp
 
             while (true)
             {
-                Console.WriteLine("---------------------------------");
+                Console.WriteLine("\n");
                 Console.Write("Input: ");
                 int.TryParse(Console.ReadLine(), out int menuNumber);
 
@@ -27,12 +27,13 @@ namespace LanguageApp
                 switch (menuNumber)
                 {
                     case 1:
-                        Console.WriteLine("Type Word Path");
+                        Console.Write("Type Word Path: ");
                         filePath = Console.ReadLine();
-
+                        //Read foreign word and translation from file and process further
                         break;
                     case 2:
-                        Console.WriteLine("Menu 2 selected");
+                        Console.WriteLine("");
+                        //Randomize foreign words that were read from file and display to user
                         break;
                     case 0:
                         Environment.Exit(0);
