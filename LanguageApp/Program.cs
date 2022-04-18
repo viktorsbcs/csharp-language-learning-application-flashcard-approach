@@ -18,7 +18,7 @@ namespace LanguageApp
 
             while (true)
             {
-                Console.WriteLine("Main Menu: 1-Word Path, 2-Begin Learning, 0-Exit");
+                Console.WriteLine("Main Menu: 1-Begin Learning, 2-Word Path, 3-Swap Languages,  0-Exit");
                 Console.WriteLine("\n");
                 Console.Write("Input: ");
                 int.TryParse(Console.ReadLine(), out int menuNumber);
@@ -26,12 +26,12 @@ namespace LanguageApp
 
                 switch (menuNumber)
                 {
-                    case 1:
+                    case 2:
                         Console.Write("Type Word Path: ");
                         filePath = Console.ReadLine();
                         //Read foreign word and translation from file and process further
                         break;
-                    case 2:
+                    case 1:
                         Console.WriteLine("German : English");
                         Console.WriteLine("Command Menu: 1-Generate Word, 0-Exit");
                         //Randomize foreign words that were read from file and display to user
@@ -71,6 +71,9 @@ namespace LanguageApp
                                 break;
                             }
                         }
+                        break;
+                    case 3:
+                        Console.WriteLine("Swap languages English : German");
                         break;
                     case 0:
                         Environment.Exit(0);
