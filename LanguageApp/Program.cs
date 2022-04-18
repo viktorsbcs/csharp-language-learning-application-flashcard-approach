@@ -14,13 +14,16 @@ namespace LanguageApp
             Console.WriteLine("---------------------------------");
 
             string? filePath = "";
+            int swapChoice = 0;
 
 
             while (true)
             {
-                Console.WriteLine("\nMain Menu: 1-Begin Learning, 2-Word Path, 3-Swap Languages,  0-Exit");
+                Console.WriteLine("\nMain Menu: 1-Begin Learning, 2-Word Path, 3-Swap Translation,  0-Exit");
                 Console.Write("Input: ");
+
                 int.TryParse(Console.ReadLine(), out int menuNumber);
+
                 Console.WriteLine("\n");
 
                 switch (menuNumber)
@@ -75,7 +78,16 @@ namespace LanguageApp
                         Console.WriteLine("\n");
                         break;
                     case 3:
-                        Console.WriteLine("Swap languages English : German\n");
+                        if (swapChoice == 0)
+                        {
+                            Console.WriteLine("Current translation => English : German\n");
+                            swapChoice = 1;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Current translation => German : English\n");
+                            swapChoice = 0;
+                        }
                         break;
                     case 0:
                         Console.WriteLine("Exiting Language learning application");
