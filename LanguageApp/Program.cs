@@ -18,22 +18,24 @@ namespace LanguageApp
 
             while (true)
             {
-                Console.WriteLine("Main Menu: 1-Begin Learning, 2-Word Path, 3-Swap Languages,  0-Exit");
-                Console.WriteLine("\n");
+                Console.WriteLine("\nMain Menu: 1-Begin Learning, 2-Word Path, 3-Swap Languages,  0-Exit");
                 Console.Write("Input: ");
                 int.TryParse(Console.ReadLine(), out int menuNumber);
-
+                Console.WriteLine("\n");
 
                 switch (menuNumber)
                 {
-                    case 1:
+                    case 1: //Randomize words to begin learning
                         Console.WriteLine("German : English");
                         Console.WriteLine("Command Menu: 1-Generate Word, 0-Exit");
-                        //Randomize foreign words that were read from file and display to user
+
                         while (true)
                         {
                             bool leaveLoop = false;
+
+                            Console.Write("Input: ");
                             string? readInputSubMenu = Console.ReadLine();
+
                             int subMenuNumber;
 
                             if (string.IsNullOrEmpty(readInputSubMenu))
@@ -68,17 +70,19 @@ namespace LanguageApp
                         break;
                     case 2:
                         Console.Write("Type Word Path: ");
-                        filePath = Console.ReadLine();
+                        //filePath = Console.ReadLine();
                         //Read foreign word and translation from file and process further
+                        Console.WriteLine("\n");
                         break;
                     case 3:
-                        Console.WriteLine("Swap languages English : German");
+                        Console.WriteLine("Swap languages English : German\n");
                         break;
                     case 0:
+                        Console.WriteLine("Exiting Language learning application");
                         Environment.Exit(0);
                         break;
                     default:
-                        Console.WriteLine("Wrong command");
+                        Console.WriteLine("Wrong command\n");
                         break;
                 }
             }
