@@ -26,11 +26,6 @@ namespace LanguageApp
 
                 switch (menuNumber)
                 {
-                    case 2:
-                        Console.Write("Type Word Path: ");
-                        filePath = Console.ReadLine();
-                        //Read foreign word and translation from file and process further
-                        break;
                     case 1:
                         Console.WriteLine("German : English");
                         Console.WriteLine("Command Menu: 1-Generate Word, 0-Exit");
@@ -50,7 +45,6 @@ namespace LanguageApp
                                 int.TryParse(readInputSubMenu, out subMenuNumber);
                             }
 
-                            //int.TryParse(Console.ReadLine(), out int subMenuNumber);
                             switch (subMenuNumber)
                             {
                                 case 1:
@@ -71,6 +65,11 @@ namespace LanguageApp
                                 break;
                             }
                         }
+                        break;
+                    case 2:
+                        Console.Write("Type Word Path: ");
+                        filePath = Console.ReadLine();
+                        //Read foreign word and translation from file and process further
                         break;
                     case 3:
                         Console.WriteLine("Swap languages English : German");
